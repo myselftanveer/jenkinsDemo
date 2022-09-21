@@ -19,6 +19,7 @@ public class SearchTest {
 		driver.get("https://www.google.com/");
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium",Keys.ENTER));
 		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
+		driver.close();
 		
 		
 		
