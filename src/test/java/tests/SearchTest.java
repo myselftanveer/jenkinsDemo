@@ -66,6 +66,7 @@ public class SearchTest {
 //		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 		System.out.println(driver.getTitle());
+		System.out.println(driver.getCurrentUrl());
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium", Keys.ENTER));
 		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
 	}
