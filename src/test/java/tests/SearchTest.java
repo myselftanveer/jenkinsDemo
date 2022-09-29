@@ -32,7 +32,8 @@ public class SearchTest {
 		FileInputStream fis = new FileInputStream("./src/main/java/resources/GlobalData.properties");
 
 		prop.load(fis);
-		String browserName = System.getProperty("browser") != null ? System.getProperty("browser") : prop.getProperty("browser");
+		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
+				: prop.getProperty("browser");
 
 		if (browserName.contains("chrome")) {
 			ChromeOptions options = new ChromeOptions();
@@ -69,6 +70,13 @@ public class SearchTest {
 		System.out.println(driver.getCurrentUrl());
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium", Keys.ENTER));
 		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
+	}
+
+	@Test
+	public void PrintMessage() {
+
+		System.out.println("Branch added");
+
 	}
 
 	@AfterMethod(alwaysRun = true)
