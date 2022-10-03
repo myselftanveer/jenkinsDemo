@@ -72,12 +72,6 @@ public class SearchTest {
 		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
 	}
 
-	@Test(priority=1)
-	public void PrintMessage() {
-
-		System.out.println("Branch added");
-
-	}
 
 	@AfterMethod(alwaysRun = true)
 
