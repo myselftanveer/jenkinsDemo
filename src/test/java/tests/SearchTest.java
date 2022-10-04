@@ -60,7 +60,7 @@ public class SearchTest {
 
 	}
 
-	@Test(priority=0)
+	@Test(priority = 0)
 	public void SearchItem() {
 
 //		WebDriverManager.chromedriver().setup();
@@ -68,16 +68,14 @@ public class SearchTest {
 		driver.get("https://www.google.com/");
 
 		System.out.println("Image is visible: " + driver.findElement(By.xpath("//img[@alt='Google']")).isDisplayed());
-		
-		System.out.println("Search bar is present: " + driver.findElement(By.xpath("//input[@title='Search']")).isDisplayed());
-		
+		System.out.println(
+				"Search bar is present: " + driver.findElement(By.xpath("//input[@title='Search']")).isDisplayed());
 		System.out.println("The current title is:" + driver.getTitle());
 		System.out.println("The current url is:" + driver.getCurrentUrl());
 
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium", Keys.ENTER));
 		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
 	}
-
 
 	@AfterMethod(alwaysRun = true)
 
