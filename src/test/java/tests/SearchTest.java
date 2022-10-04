@@ -66,6 +66,7 @@ public class SearchTest {
 //		WebDriverManager.chromedriver().setup();
 //		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
+		System.out.println("Image is visible: " + driver.findElement(By.xpath("//img[@alt='Google']")).isDisplayed());
 		System.out.println(driver.getTitle());
 		System.out.println(driver.getCurrentUrl());
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium", Keys.ENTER));
