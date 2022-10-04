@@ -68,7 +68,7 @@ public class SearchTest {
 		driver.get("https://www.google.com/");
 
 		System.out.println("Image is visible: " + driver.findElement(By.xpath("//img[@alt='Google']")).isDisplayed());
-		System.out.println("QA Branch");
+		
 		System.out.println("The current title is:" + driver.getTitle());
 		System.out.println("The current url is:" + driver.getCurrentUrl());
 
