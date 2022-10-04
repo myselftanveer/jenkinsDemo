@@ -69,6 +69,8 @@ public class SearchTest {
 
 		System.out.println("Image is visible: " + driver.findElement(By.xpath("//img[@alt='Google']")).isDisplayed());
 		
+		System.out.println("Search bar is present: " + driver.findElement(By.xpath("//input[@title='Search']")).isDisplayed());
+		
 		System.out.println("The current title is:" + driver.getTitle());
 		System.out.println("The current url is:" + driver.getCurrentUrl());
 
