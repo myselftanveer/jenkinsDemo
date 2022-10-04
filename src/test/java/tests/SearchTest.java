@@ -1,13 +1,11 @@
 package tests;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,7 +14,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -25,7 +23,7 @@ public class SearchTest {
 
 	WebDriver driver;
 
-	@BeforeTest
+	@BeforeMethod
 	public WebDriver initializeDriver() throws IOException {
 
 		Properties prop = new Properties();
@@ -63,8 +61,6 @@ public class SearchTest {
 	@Test(priority = 0)
 	public void SearchItem() {
 
-//		WebDriverManager.chromedriver().setup();
-//		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.google.com/");
 
 		System.out.println("Image is visible: " + driver.findElement(By.xpath("//img[@alt='Google']")).isDisplayed());
