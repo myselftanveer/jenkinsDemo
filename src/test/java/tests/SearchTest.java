@@ -70,7 +70,7 @@ public class SearchTest {
 		System.out.println("The current url is:" + driver.getCurrentUrl());
 
 		driver.findElement(By.cssSelector("input[name='q']")).sendKeys(Keys.chord("Selenium", Keys.ENTER));
-		Assert.assertTrue(driver.getPageSource().contains("Seleni1um"), "Item is not present");
+		Assert.assertTrue(driver.getPageSource().contains("Selenium"), "Item is not present");
 	}
 
 	@AfterMethod(alwaysRun = true)
